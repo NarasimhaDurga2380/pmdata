@@ -1,0 +1,10 @@
+<mat-list role="list">
+    <mat-list-item *ngFor="let pmData of pmList">
+        <div>
+            <mat-checkbox [checked]="pmData.isChecked" (change)="pmData.isChecked = !pmData.isChecked">{{ pmData?.name }}</mat-checkbox>
+        </div>
+        
+        <div mat-line>{{pmData?.description}}</div>
+            <div mat-line> {{pmData?.size}} </div>
+    </mat-list-item>
+</mat-list>
